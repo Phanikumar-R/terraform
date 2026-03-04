@@ -10,7 +10,7 @@ resource "aws_security_group" "allow_tls" {   # this is for terraform reference
   name        = "allow_all_terraform" # this is for aws account
   description = "Allow TLS inbound traffic and all outbound traffic"
 
-  egress {   # This is for outbound traffic
+  egress {   # This is for outbound traffic format
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
@@ -18,7 +18,7 @@ resource "aws_security_group" "allow_tls" {   # this is for terraform reference
     ipv6_cidr_blocks = ["::/0"]
   }
 
-  ingress {   # This is for inbound traffic
+  ingress {   # This is for inbound traffic format
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
